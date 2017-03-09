@@ -16,6 +16,7 @@ export default class EditableHTML extends React.Component {
     this.state = {
       showToolbar: false,
       active: false,
+      hasText: !_.isEmpty($(content).text()),
       editorState: EditorState.createWithContent(stateFromHTML(content))
     };
 
