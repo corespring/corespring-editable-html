@@ -83,10 +83,10 @@ export default class EditableHTML extends React.Component {
           </div>
         ) : (
           this.state.hasText ? (
-            <div dangerouslySetInnerHTML={{__html: stateToHTML(this.state.editorState.getCurrentContent())}} 
+            <div className="placeholder-html" dangerouslySetInnerHTML={{__html: stateToHTML(this.state.editorState.getCurrentContent())}} 
               onClick={this.toggleHtml.bind(this)}></div>
           ) : (
-            <div onClick={this.toggleHtml.bind(this)}>{this.props.placeholder}</div>
+            <div className="placeholder-text" onClick={this.toggleHtml.bind(this)}>{this.props.placeholder}</div>
           )
         )
       }</div>
